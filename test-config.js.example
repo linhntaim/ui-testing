@@ -2,5 +2,5 @@ module.exports = {
     CHROME_OPTIONS: {
     },
     DEFAULT_TIMEOUT: 10000, // 10s
-    START_URL: 'http://local.ministop.com/pine-challenge',
+    START_URL: 'https://github.com/linhntaim/ui-testing',
 };

@@ -4,9 +4,10 @@ const Utils = require('../../test-sutte/test-utils')
 
 class TestTrial extends TestCase {
     async run(testDriver) {
-        await testDriver.browser.get('http://www.google.com/ncr')
-        await testDriver.browser.findElement(testDriver.by.name('q')).sendKeys('webdriver', testDriver.key.RETURN)
-        await testDriver.browser.wait(testDriver.until.titleIs('webdriver - Google Search'), 1000)
+        this.out('Testing...')
+        await testDriver.browser.get(Configuration.START_URL)
+        await testDriver.browser.findElement(testDriver.by.css('[title="Star linhntaim/ui-testing"]')).click()
+        this.out('Tested!')
     }
 }
 

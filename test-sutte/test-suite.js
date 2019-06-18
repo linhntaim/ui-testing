@@ -12,10 +12,12 @@ class TestSuite {
     async run() {
         try {
             for (let i in this.testCases) {
+                await this.testCases[i].start(this.testDriver)
                 await this.testCases[i].run(this.testDriver)
+                await this.testCases[i].end(this.testDriver)
             }
         } finally {
-            // await this.testDriver.browser.quit()
+            await this.testDriver.browser.quit()
         }
     }
 }

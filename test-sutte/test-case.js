@@ -1,8 +1,12 @@
 const Utils = require('./test-utils')
 
 class TestCase {
-    async start(testDriver) {
+    constructor(name) {
+        this.name = name
+    }
 
+    async start(testDriver) {
+        this.out('START')
     }
 
     async run(testDriver) {
@@ -10,7 +14,11 @@ class TestCase {
     }
 
     async end(testDriver) {
+        this.out('END')
+    }
 
+    out(message) {
+        Utils.castText(this.name, message)
     }
 }
 

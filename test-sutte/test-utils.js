@@ -1,11 +1,11 @@
 module.exports = {
-    castError: (message = '') => {
-        console.log('--FAILED' + (message === '' ? '' : ': ' + message));
+    castError: (namespace, message = '') => {
+        this.castText(namespace, '--FAILED' + (message === '' ? '' : ': ' + message))
     },
-    castSuccess: (message = '') => {
-        console.log('--PASSED' + (message === '' ? '' : ': ' + message));
+    castSuccess: (namespace, message = '') => {
+        this.castText(namespace, '--PASSED' + (message === '' ? '' : ': ' + message))
     },
-    castText: (message) => {
-        console.log(message);
+    castText: (namespace, message) => {
+        console.log(namespace + '::' + message)
     }
-};
+}
