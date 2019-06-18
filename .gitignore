@@ -1,0 +1,4 @@
+/.idea
+node-modules
+test-config.js
+debug.log

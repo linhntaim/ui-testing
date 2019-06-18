@@ -1,0 +1,6 @@
+module.exports = {
+    CHROME_OPTIONS: {
+    },
+    DEFAULT_TIMEOUT: 10000, // 10s
+    START_URL: 'http://local.ministop.com/pine-challenge',
+};
